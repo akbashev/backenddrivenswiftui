@@ -1,5 +1,5 @@
 //
-//  JSONView.swift
+//  CodableView.swift
 //  backenddrivenswiftui (iOS)
 //
 //  Created by Jaleel Akbashev on 10.03.21.
