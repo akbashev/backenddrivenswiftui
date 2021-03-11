@@ -12,12 +12,12 @@ public struct CodableView: Codable, View, Identifiable {
     
     public struct Properties: Codable {
         
-        public struct CodableBorder: Codable {
+        public struct Border: Codable {
             let color: String?
             let width: Float?
         }
         
-        public struct CodablePadding: Codable {
+        public struct Padding: Codable {
             let top: Float?
             let bottom: Float?
             let left: Float?
@@ -31,13 +31,13 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public struct CodableFrame: Codable {
+        public struct Frame: Codable {
             let width: Float?
             let height: Float?
-            let alignment: CodableAlignment?
+            let alignment: Alignment?
         }
         
-        public struct CodablePositionFrame: Codable {
+        public struct PositionFrame: Codable {
             
             private static let infinity: String = "infinity"
 
@@ -47,7 +47,7 @@ public struct CodableView: Codable, View, Identifiable {
             let minHeight: Float?
             let idealHeight: Float?
             let maxHeight: Float?
-            let alignment: CodableAlignment?
+            let alignment: Alignment?
             
             var isWidthInfinite: Bool = false
             var isHeightInfinite: Bool = false
@@ -71,7 +71,7 @@ public struct CodableView: Codable, View, Identifiable {
                 do {
                     let width = try container.decode(String.self, forKey: .maxWidth)
                     switch width {
-                    case CodablePositionFrame.infinity:
+                    case PositionFrame.infinity:
                         self.isWidthInfinite = true
                     default:
                         break
@@ -84,7 +84,7 @@ public struct CodableView: Codable, View, Identifiable {
                 do {
                     let width = try container.decode(String.self, forKey: .maxHeight)
                     switch width {
-                    case CodablePositionFrame.infinity:
+                    case PositionFrame.infinity:
                         self.isHeightInfinite = true
                     default:
                         break
@@ -98,18 +98,18 @@ public struct CodableView: Codable, View, Identifiable {
                 self.minHeight = try container.decodeIfPresent(Float.self, forKey: .minHeight)
                 self.idealWidth = try container.decodeIfPresent(Float.self, forKey: .idealWidth)
                 self.idealHeight = try container.decodeIfPresent(Float.self, forKey: .idealHeight)
-                self.alignment = try container.decodeIfPresent(CodableAlignment.self, forKey: .alignment)
+                self.alignment = try container.decodeIfPresent(Alignment.self, forKey: .alignment)
             }
             
             public func encode(to encoder: Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 if self.isWidthInfinite {
-                    try container.encode(CodablePositionFrame.infinity, forKey: .maxWidth)
+                    try container.encode(PositionFrame.infinity, forKey: .maxWidth)
                 } else {
                     try container.encodeIfPresent(self.maxWidth, forKey: .maxWidth)
                 }
                 if self.isHeightInfinite {
-                    try container.encode(CodablePositionFrame.infinity, forKey: .maxHeight)
+                    try container.encode(PositionFrame.infinity, forKey: .maxHeight)
                 } else {
                     try container.encodeIfPresent(self.maxHeight, forKey: .maxHeight)
                 }
@@ -122,7 +122,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableHorizontalAlignment: String, Codable {
+        public enum HorizontalAlignment: String, Codable {
             case left
             case center
             case right
@@ -139,7 +139,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableVerticalAlignment: String, Codable {
+        public enum VerticalAlignment: String, Codable {
             case top
             case bottom
             case center
@@ -162,7 +162,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableAlignment: String, Codable {
+        public enum Alignment: String, Codable {
             case bottom
             case bottomLeft
             case bottomRight
@@ -197,7 +197,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableAxis: String, Codable {
+        public enum Axis: String, Codable {
             case vertical
             case horizontal
             
@@ -211,7 +211,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableFont: String, Codable {
+        public enum Font: String, Codable {
             case largeTitle
             case title
             case headline
@@ -243,7 +243,7 @@ public struct CodableView: Codable, View, Identifiable {
             }
         }
         
-        public enum CodableFontWeight: String, Codable {
+        public enum FontWeight: String, Codable {
             case ultraLight
             case thin
             case light
@@ -279,18 +279,18 @@ public struct CodableView: Codable, View, Identifiable {
         }
         
         
-        let border: CodableBorder?
-        let padding: CodablePadding?
-        let frame: CodableFrame?
-        let positionFrame: CodablePositionFrame?
+        let border: Border?
+        let padding: Padding?
+        let frame: Frame?
+        let positionFrame: PositionFrame?
         
-        let horizontalAlignment: CodableHorizontalAlignment?
-        let verticalAlignment: CodableVerticalAlignment?
-        let alignment: CodableAlignment?
+        let horizontalAlignment: HorizontalAlignment?
+        let verticalAlignment: VerticalAlignment?
+        let alignment: Alignment?
         
-        let axis: CodableAxis?
-        let font: CodableFont?
-        let fontWeight: CodableFontWeight?
+        let axis: Axis?
+        let font: Font?
+        let fontWeight: FontWeight?
         
         let foregroundColor: String?
         let backgroundColor: String?

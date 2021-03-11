@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FrameModifier: ViewModifier {
     
-    var frame: CodableView.Properties.CodableFrame?
-    var positionFrame:  CodableView.Properties.CodablePositionFrame?
+    var frame: CodableView.Properties.Frame?
+    var positionFrame:  CodableView.Properties.PositionFrame?
 
     @ViewBuilder func body(content: Content) -> some View {
         if let frame = self.frame {
