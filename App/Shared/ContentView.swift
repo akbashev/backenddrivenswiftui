@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CodableView
 
 struct ContentView: View {
     var body: some View {

@@ -7,23 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7137CD7125F92EAC00AD3D1D /* FrameModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7137CD7025F92EAC00AD3D1D /* FrameModifier.swift */; };
-		7137CD7225F92EAC00AD3D1D /* FrameModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7137CD7025F92EAC00AD3D1D /* FrameModifier.swift */; };
+		71975B5826592C360097CBBD /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 71975B5726592C360097CBBD /* Models */; };
+		71975B5A26592C3D0097CBBD /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 71975B5926592C3D0097CBBD /* Models */; };
 		71CB07BC25F8048500F57855 /* backenddrivenswiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07A925F8048500F57855 /* backenddrivenswiftuiApp.swift */; };
 		71CB07BD25F8048500F57855 /* backenddrivenswiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07A925F8048500F57855 /* backenddrivenswiftuiApp.swift */; };
 		71CB07BE25F8048500F57855 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07AA25F8048500F57855 /* ContentView.swift */; };
 		71CB07BF25F8048500F57855 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07AA25F8048500F57855 /* ContentView.swift */; };
 		71CB07C025F8048500F57855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CB07AB25F8048500F57855 /* Assets.xcassets */; };
 		71CB07C125F8048500F57855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CB07AB25F8048500F57855 /* Assets.xcassets */; };
-		71CB07E225F8069100F57855 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07E125F8069100F57855 /* CodableView.swift */; };
-		71CB07EF25F8087700F57855 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71CB07EE25F8087700F57855 /* Kingfisher */; };
-		71CB07FB25F80FC800F57855 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB07E125F8069100F57855 /* CodableView.swift */; };
-		71CB080025F80FF700F57855 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71CB07FF25F80FF700F57855 /* Kingfisher */; };
-		71CB080525F8D60B00F57855 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB080425F8D60B00F57855 /* Color+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7137CD7025F92EAC00AD3D1D /* FrameModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameModifier.swift; sourceTree = "<group>"; };
 		71CB07A925F8048500F57855 /* backenddrivenswiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backenddrivenswiftuiApp.swift; sourceTree = "<group>"; };
 		71CB07AA25F8048500F57855 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71CB07AB25F8048500F57855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,8 +26,6 @@
 		71CB07B825F8048500F57855 /* backenddrivenswiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backenddrivenswiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CB07BA25F8048500F57855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71CB07BB25F8048500F57855 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		71CB07E125F8069100F57855 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
-		71CB080425F8D60B00F57855 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71CB07EF25F8087700F57855 /* Kingfisher in Frameworks */,
+				71975B5826592C360097CBBD /* Models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71CB080025F80FF700F57855 /* Kingfisher in Frameworks */,
+				71975B5A26592C3D0097CBBD /* Models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +51,6 @@
 		71CB07A325F8048400F57855 = {
 			isa = PBXGroup;
 			children = (
-				71CB07CC25F8049600F57855 /* Core */,
 				71CB07A825F8048400F57855 /* Shared */,
 				71CB07B225F8048500F57855 /* iOS */,
 				71CB07B925F8048500F57855 /* macOS */,
@@ -104,29 +95,11 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		71CB07CC25F8049600F57855 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				71CB080325F8D5FF00F57855 /* Extensions */,
-				71CB07E125F8069100F57855 /* CodableView.swift */,
-				7137CD7025F92EAC00AD3D1D /* FrameModifier.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		71CB07FE25F80FF700F57855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		71CB080325F8D5FF00F57855 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				71CB080425F8D60B00F57855 /* Color+Hex.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +119,7 @@
 			);
 			name = "backenddrivenswiftui (iOS)";
 			packageProductDependencies = (
-				71CB07EE25F8087700F57855 /* Kingfisher */,
+				71975B5726592C360097CBBD /* Models */,
 			);
 			productName = "backenddrivenswiftui (iOS)";
 			productReference = 71CB07B025F8048500F57855 /* backenddrivenswiftui.app */;
@@ -166,7 +139,7 @@
 			);
 			name = "backenddrivenswiftui (macOS)";
 			packageProductDependencies = (
-				71CB07FF25F80FF700F57855 /* Kingfisher */,
+				71975B5926592C3D0097CBBD /* Models */,
 			);
 			productName = "backenddrivenswiftui (macOS)";
 			productReference = 71CB07B825F8048500F57855 /* backenddrivenswiftui.app */;
@@ -199,7 +172,6 @@
 			);
 			mainGroup = 71CB07A325F8048400F57855;
 			packageReferences = (
-				71CB07ED25F8087700F57855 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 71CB07B125F8048500F57855 /* Products */;
 			projectDirPath = "";
@@ -237,9 +209,6 @@
 			files = (
 				71CB07BE25F8048500F57855 /* ContentView.swift in Sources */,
 				71CB07BC25F8048500F57855 /* backenddrivenswiftuiApp.swift in Sources */,
-				71CB07E225F8069100F57855 /* CodableView.swift in Sources */,
-				71CB080525F8D60B00F57855 /* Color+Hex.swift in Sources */,
-				7137CD7125F92EAC00AD3D1D /* FrameModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7137CD7225F92EAC00AD3D1D /* FrameModifier.swift in Sources */,
 				71CB07BF25F8048500F57855 /* ContentView.swift in Sources */,
-				71CB07FB25F80FC800F57855 /* CodableView.swift in Sources */,
 				71CB07BD25F8048500F57855 /* backenddrivenswiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,27 +460,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		71CB07ED25F8087700F57855 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		71CB07EE25F8087700F57855 /* Kingfisher */ = {
+		71975B5726592C360097CBBD /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 71CB07ED25F8087700F57855 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			productName = Models;
 		};
-		71CB07FF25F80FF700F57855 /* Kingfisher */ = {
+		71975B5926592C3D0097CBBD /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 71CB07ED25F8087700F57855 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			productName = Models;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
