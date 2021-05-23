@@ -10,17 +10,7 @@ import CodableView
 
 struct ContentView: View {
     var body: some View {
-        try! JSONDecoder().decode(CodableView.self, from: json!).padding()
-//        VStack(alignment: .leading, spacing: 8) {
-//            HStack(spacing: 8) {
-//                Image(systemName: "person.crop.circle")
-//                    .resizable()
-//                    .frame(width: 48, height: 48)
-//                    .scaledToFit()
-//                Text("Test text").fontWeight(.semibold).font(.body)
-//            }
-//            Text("It's a decription here").foregroundColor(Color(hex: "#888888")).background(Color(hex: "#ff0000"))
-//        }.frame(maxWidth: .infinity, alignment: .leading).padding()
+        URLView(url: URL(string: "http://127.0.0.1:8080/dummy")!)
     }
     
 }
@@ -33,56 +23,81 @@ struct ContentView_Previews: PreviewProvider {
 
 let json = """
 {
-    "type": "VStack",
-    "properties": {
-        "spacing": 8,
-        "horizontalAlignment": "left",
-        "positionFrame": {
-            "maxWidth": "infinity",
-            "alignment": "left"
-        }
-    },
-    "subviews": [
+    "type": "NavigationView",
+    "content": [
         {
-            "type": "HStack",
+            "type": "VStack",
             "properties": {
                 "spacing": 8,
+                "horizontalAlignment": "left",
+                "positionFrame": {
+                    "maxWidth": "infinity",
+                    "alignment": "left"
+                }
             },
             "subviews": [
                 {
-                  "type": "Image",
-                  "value": {
-                      "imageUrl": "person.crop.circle",
-                      "imageType": "system"
-                  },
-                  "properties": {
-                    "frame": {
-                        "width": 48,
-                        "height": 48
-                    }
-                  }
+                    "type": "HStack",
+                    "properties": {
+                        "spacing": 8,
+                    },
+                    "subviews": [
+                        {
+                          "type": "Image",
+                          "value": {
+                              "imageUrl": "person.crop.circle",
+                              "imageType": "system"
+                          },
+                          "properties": {
+                            "frame": {
+                                "width": 48,
+                                "height": 48
+                            }
+                          }
+                        },
+                        {
+                            "type": "Text",
+                            "value": {
+                                "text": "Test text"
+                            },
+                            "properties": {
+                                "fontWeight": "semibold",
+                                "font": "body"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "type": "Text",
-                    "value": {
-                        "text": "Test text"
-                    },
-                    "properties": {
-                        "fontWeight": "semibold",
-                        "font": "body"
-                    }
-                }
+                    "type": "NavigationLink",
+                    "destination": [
+                        {
+                            "type": "Text",
+                            "value": {
+                                "text": "It's a decription here"
+                            },
+                            "properties": {
+                                "foregroundColor": "#888888",
+                                "backgroundColor": "#ff0000"
+                            }
+                        }
+                    ],
+                    "label": [
+                        {
+                            "type": "Text",
+                            "value": {
+                                "text": "It's a decription here"
+                            },
+                            "properties": {
+                                "foregroundColor": "#888888",
+                                "backgroundColor": "#ff0000"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Spacer"
+                },
             ]
-        },
-        {
-            "type": "Text",
-            "value": {
-                "text": "It's a decription here"
-            },
-            "properties": {
-                "foregroundColor": "#888888",
-                "backgroundColor": "#ff0000"
-            }
         }
     ]
 }
